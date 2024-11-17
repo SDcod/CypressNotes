@@ -1,0 +1,24 @@
+1.Initialize node file.
+npm init -y
+
+2.Install cypress 
+npm install cypress --save-dev
+
+3.open cypress dashboard
+npx cypress open
+
+4.Setup framework
+/cypress-project-name
+  /cypress
+    /e2e              # Test cases
+      /pages          # Page Object Models
+        /LoginPage.js
+        /DashboardPage.js
+    /fixtures         # Test data (JSON files)
+      /testData.json
+    /support          # Helper utilities and commands
+      /commands.js    # Custom Cypress commands
+      /e2e.js         # Global test configuration
+    /plugins          # Plugin files
+  cypress.config.js   # Cypress configuration
+  package.json   
