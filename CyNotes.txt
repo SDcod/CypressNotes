@@ -11,7 +11,7 @@ npx cypress open
 /cypress-project-name
   /cypress
     /e2e              # Test cases
-      /pages          # Page Object Models
+    /pages            # Page Object Models
         /LoginPage.js
         /DashboardPage.js
     /fixtures         # Test data (JSON files)
