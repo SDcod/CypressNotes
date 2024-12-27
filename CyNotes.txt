@@ -29,3 +29,5 @@ npx cypress open
 -We can use then to handle asynchronous processes.
 -Use should('exist')/('not.exist') if we want to assert wether the element is present on the DOM itself or not.
 -Use should('be.visible')/('not.be.visible') we want to assert the element when it is present in DOM but visible/not visible for user.
+  Example 1: Verify hidden elements using not.be.visible and be.visible.
+  Example 2: Handle elements dynamically added to the DOM using not.exist and should('be.visible').
