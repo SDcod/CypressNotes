@@ -24,6 +24,65 @@ npx cypress open
   package.json   
 
 
+run cypress in cli : npx cypress run
+
+checkboxes
+radiobtns
+Dropdowns : Static, Dynamic, Multiple-select
+Alerts : **use stub to validate alert text, otherwise it will give false results.
+	alert, confirm , prompt
+Tables
+iFrames
+for X-path : npm i -D cypress-xpath
+browser controls
+Hooks
+Fixtures
+Reading Data with Excel 
+----- with CSV
+custom commands
+configurations - globa,spec specific
+
+PAGE OBJECT MODEL (POM)
+	BasePage
+	Object Creation in PageClass itself
+	Method Chaining
+	
+Cypress Dashboards : has paid services
+Mochawesome Report - its a javascript framework (not related to cy)
+
+API testing - GET,POST,PUT,DELETE
+Mocks - mocking API i.e. test duplicate of APIs
+Stubs
+
+Docker : 
+	Dockerfile(set of instructions to create a docker image) : base image,instructions,layering,best practices...
+	
+	docker-compose.yml(tool for definig and running multi-container docker apps. ): services, networks, volumes, environmental variables, scaling, dependencies, CLI, port mapping, configuration overrides.
+	
+	.dockerignore : to add files/folders we want to exclude
+	
+BDD - Behaviour Driver Development
+	Cucumber
+		install > configure > add vs extensions (cucumber,cucumber full support). Feature files and Step Def files (***make sure all the namingconventions and configs are accurate) 
+	sunchronize feature file with step def file in VS code via setting JSON
+	plugins to generate step def files from the feature file
+	
+	Test data in cucumber - Fixtures(this is recommended option) and Data tables
+	HTML report with cucumber (screenshots on failure)
+	POM with cucumber
+	
+CICD - Jenkins
+		Nonparamaterized project
+		parameterized project
+		
+***
+To avoid flaky tests we can have a 'data-test' attribute having unique values to get the element cypress is looking for for operations.
+ex. <h1 class="headingStyle" data-test="heroSectionheading">Welcome</h1>,
+	cy.get('[data-test="heroSectionheading"]').contains(/Welcom/i);//here /*/i is for the regex to neglect case.
+	
+-Cy commands execute in order you write, any custom js written will run asynchronously
+-we can use .then to control flow
+
 
 ************miss points********************
 -We can use then to handle asynchronous processes.
