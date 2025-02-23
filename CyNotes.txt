@@ -42,19 +42,19 @@ Reading Data with Excel
 custom commands
 configurations - globa,spec specific
 
-PAGE OBJECT MODEL (POM)
+>PAGE OBJECT MODEL (POM)
 	BasePage
 	Object Creation in PageClass itself
 	Method Chaining
 	
-Cypress Dashboards : has paid services
-Mochawesome Report - its a javascript framework (not related to cy)
+>Cypress Dashboards : has paid services
+>Mochawesome Report - its a javascript framework (not related to cy)
 
-API testing - GET,POST,PUT,DELETE
+>API testing - GET,POST,PUT,DELETE
 Mocks - mocking API i.e. test duplicate of APIs
 Stubs
 
-Docker : 
+>Docker : 
 	Dockerfile(set of instructions to create a docker image) : base image,instructions,layering,best practices...
 	
 	docker-compose.yml(tool for definig and running multi-container docker apps. ): services, networks, volumes, environmental variables, scaling, dependencies, CLI, port mapping, configuration overrides.
@@ -84,9 +84,23 @@ ex. <h1 class="headingStyle" data-test="heroSectionheading">Welcome</h1>,
 -we can use .then to control flow
 
 
-************miss points********************
+************misc points********************
 -We can use then to handle asynchronous processes.
 -Use should('exist')/('not.exist') if we want to assert wether the element is present on the DOM itself or not.
 -Use should('be.visible')/('not.be.visible') we want to assert the element when it is present in DOM but visible/not visible for user.
   Example 1: Verify hidden elements using not.be.visible and be.visible.
   Example 2: Handle elements dynamically added to the DOM using not.exist and should('be.visible').
+
+
+CI/CD - Git/Github Basics.
+			yml
+			GithubActions 
+				customized script run
+				multiple browsers
+				parallel execution
+				reporting through pipline runs - parallel test reporting , configurations as (if:always)etc
+				multiple environments - using environment_name.config.js 
+				secretvariables in github
+			shell commands
+
+
