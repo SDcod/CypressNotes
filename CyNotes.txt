@@ -103,4 +103,5 @@ CI/CD - Git/Github Basics.
 				secretvariables in github
 			shell commands
 
-
+Selectors
+	CSS, Xpath
