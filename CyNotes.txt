@@ -104,4 +104,33 @@ CI/CD - Git/Github Basics.
 			shell commands
 
 Selectors
-	CSS, Xpath
+	CSS, Xpath, Cypress Selector methods
+
+
+--Cypress Architecture
+	Cypress automation testing runs on a NodeJS server. To create a connection between the browser and the Node.js server, Cypress uses WebSocket protocol. WebSockets provide full-duplex communication which allows Cypress to send commands, such as navigating to URLs, interacting with elements, and making assertions, from the test code to the browser in real-time. It also enables Cypress to receive feedback, such as DOM snapshots, console logs, and other test-related information, from the browser back to the server.
+
+Let’s break down the components and how they interact:
+
+User Interaction: The process starts with a user interacting with the web application. This could involve actions like clicking buttons, selecting values from drop down, filling forms, or navigating through pages.
+
+Cypress Test Scripts: Developers create test scripts using JavaScript or Typescript. These scripts simulate user interactions and verify that the application behaves as expected.
+
+Cypress Runner: The Cypress Runner executes the test scripts. It interacts with the web application, capturing screenshots and videos during the test.
+
+Proxy Server: A proxy server sits between the Cypress Runner and the web application. It intercepts requests and responses, allowing developers to manipulate them.
+
+Node.js: Cypress runs on Node.js, providing a runtime environment for executing JavaScript/or Typescript code.
+
+Web Socket: Web sockets protocol enables real-time communication between the Cypress Runner and the web application.
+
+HTTP Requests/Responses: In the architecture diagram you can see HTTP requests (e.g., GET, POST) and responses exchanged between the Cypress Runner and the application server.
+
+How Cypress Test Execution Works:
+The user interacts with the web application.
+Cypress test scripts send commands to the Cypress Runner.
+The Cypress Runner communicates with the proxy server.
+The proxy server forwards requests to the application server.
+The application server processes requests and sends back responses.
+The Cypress Runner captures screenshots and videos during the test.
+Developers analyze the test results to ensure the application functions correctly
